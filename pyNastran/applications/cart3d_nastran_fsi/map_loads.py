@@ -385,8 +385,8 @@ class LoadMapping(object):
         log.info("---start piercing---")
         if debug:
             log.info("nAeroElements = %s" % naero_elements)
-        tEst = 1.
-        tLeft = 1.
+        time_est = 1.
+        time_left = 1.
         percent_done = 0.
         use_multiprocessing = False
 
@@ -412,8 +412,8 @@ class LoadMapping(object):
                 for (i, aero_eid) in enumerate(aero_element_ids):
                     if i % 1000 == 0 and debug or 1:
                         #log.debug('  piercing %sth element' % i)
-                        log.debug("tEst=%g minutes; tLeft=%g minutes; %.3f%% done" % (
-                            tEst, tLeft, percent_done))
+                        log.debug("time_est=%g minutes; time_left=%g minutes; %.3f%% done" % (
+                            time_est, time_left, percent_done))
                         sys.stdout.flush()
 
                     aero_element = aero_model.Element(aero_eid)
@@ -434,10 +434,10 @@ class LoadMapping(object):
                     map_file.write('%s %s\n' % (aero_eid, distribution))
 
                     dt = (time() - t0) / 60.
-                    tEst = dt * naero_elements / (i + 1.)  # dtPerElement*nElements
-                    tLeft = tEst - dt
-                    if tEst != 0.0:
-                        percent_done = dt / tEst * 100.
+                    time_est = dt * naero_elements / (i + 1.)  # dtPerElement*nElements
+                    time_left = time_est - dt
+                    if time_est != 0.0:
+                        percent_done = dt / time_est * 100.
 
         log.info("---finish piercing---")
         self.run_map_test(self.mapping_matrix)
