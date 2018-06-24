@@ -3893,8 +3893,8 @@ class DVPREL1(DVXREL1):
     def validate(self):
         DVXREL1.validate(self)
         self.pname_fid = validate_dvprel(self.prop_type, self.pname_fid, validate=True)
-        unused_key, msg = get_dvprel_key(self)
-        assert len(msg) == 0, msg
+        #unused_key, msg = get_dvprel_key(self)
+        #assert len(msg) == 0, msg
 
     @classmethod
     def add_card(cls, card, comment=''):
