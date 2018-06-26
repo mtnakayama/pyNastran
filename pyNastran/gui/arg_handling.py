@@ -171,7 +171,7 @@ def run_docopt():
     user_geom = data['--user_geom']
 
     if pyNastran.is_pynastrangui_exe:
-        os.environ.setdefault('QT_API', 'pyqt4')
+        os.environ.setdefault('QT_API', 'pyqt5')
     elif data['--qt'] is not None:
         qt = data['--qt'].lower()
         assert qt in ['pyside', 'pyqt4', 'pyqt5'], 'qt=%r' % qt

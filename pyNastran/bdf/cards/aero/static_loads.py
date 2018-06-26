@@ -842,7 +842,6 @@ class TRIM(BaseCard):
                 suport_dof_msg = ''
                 for nid, components in zip(nids, suport1.Cs):
                     for componenti in components:
-                        #print('  SUPORT1: id=%r nid=%r C=%r' % (conid, nid, componenti))
                         dof = (nid, componenti)
                         suport_dof_msg += '    (%s, %s)\n' % (nid, componenti)
                         if dof in suport_dofs:

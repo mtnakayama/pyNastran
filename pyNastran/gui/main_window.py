@@ -116,7 +116,7 @@ class MainWindow(GuiCommon2, NastranIO):
         #fmt_order=fmt_order, inputs=inputs,
         #html_logging=html_logging,
 
-        if qt_version in ['pyqt', 'pyqt4', 'pyqt5', 'pyside']:
+        if qt_version in ['pyqt4', 'pyqt5', 'pyside']:
             NastranIO.__init__(self)
         else:
             raise NotImplementedError('qt_version=%r is not supported' % qt_version)

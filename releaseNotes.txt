@@ -8,7 +8,7 @@ Developer Dicussion:  https://groups.google.com/forum/#!forum/pynastran-dev
 If you have a bug/want a new feature or card, leave some feedback on the
 Issues List:     https://github.com/SteveDoyle2/pyNastran/issues
 
------------------------v1.1.0 released 2018/6/?-----------------------
+-----------------------v1.1.0 released 2018/6/26-----------------------
 This is a major release.  As in the v1.0 release, the focus has been on testing.
 
 The bigest change has been to cross-referencing.  All cross-referenced 

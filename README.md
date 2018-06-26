@@ -61,12 +61,12 @@ Using the pyNastran GUI, you can read in Nastran models and quickly view results
 
 This should be hidden...
 
-v1.1-progress
+### pyNastran v1.1.0 has not been released (6/25/2018)
 
 It's been roughly a year and 100 tickets closed since the last version, so it's probably
 time for another release!  I'm pleased to announce that the continuing problems 
 of up-to-date documentation will hopefully be a thing of the past.  xxx 
-has graciously offered to host the documentation.  The pyNastranGUI exe (previously 
+has offered to host the documentation.  The pyNastranGUI exe (previously 
 hosted on Sourceforge) will also be hosted there.  Outside of that, it's the same 
 open-source project and will still be on Github.
 
@@ -82,7 +82,7 @@ Programmatics
  - dropping VTK 5/6 suppoprt for the GUI
 
 BDF:
- - currently 340 cards supported
+ - 343 cards supported (up from 312)
  - cross-referencing is now more straightforward to new users (much of v1.0 works using the `_ref` option)
    - ``*_ref`` attributes are cross-referenced
       - ``element.nodes`` is not cross-referenced
@@ -99,6 +99,7 @@ OP2:
  - fixed sparse matrices being stored as dense matrices
 
 GUI:
+ - preliminary support for PySide
  - can now mix and match fringe/displacement/vector results (e.g., max principal stress shown on a displaced model)
  - improved animation menu
     - in gui animation

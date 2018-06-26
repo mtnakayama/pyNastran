@@ -272,7 +272,7 @@ def cmd_line_mirror():  # pragma: no cover
         tol = -1.
 
     plane = data['--plane']
-    print('tol = %s' % tol)
+
     print(data)
     size = 16
     bdf_filename = data['IN_BDF_FILENAME']

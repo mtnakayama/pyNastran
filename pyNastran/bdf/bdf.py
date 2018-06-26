@@ -1554,9 +1554,8 @@ class BDF_(BDFMethods, GetCard, AddCards, WriteMesh, UnXrefMesh):
                     self.card_count['ENDDATA'] = 1
                     if nlines - i > 1:
                         nleftover = nlines - i - 1
-                        msg = 'B-exiting due to ENDDATA found with %i lines left' % nleftover
+                        msg = 'exiting due to ENDDATA found with %i lines left' % nleftover
                         self.log.debug(msg)
-                        bbb
                     return cards_dict, card_count
                 #print("card_name = %s" % card_name)
 
@@ -4057,7 +4056,7 @@ class BDF_(BDFMethods, GetCard, AddCards, WriteMesh, UnXrefMesh):
         self._read_bdf_helper(bdf_filename, encoding, punch, read_includes)
         self.log.debug('---starting BDF.read_bdf of %s---' % self.bdf_filename)
         self._parse_primary_file_header(bdf_filename)
-        print('aaa.nastran_format =', self.nastran_format)
+
         obj = BDFInputPy(self.read_includes, self.dumplines, self._encoding,
                          nastran_format=self.nastran_format,
                          log=self.log, debug=self.debug)
