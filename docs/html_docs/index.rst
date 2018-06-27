@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to pyNastran's documentation for v1.0.0!
+Welcome to pyNastran's documentation for v1.1.0!
 ================================================
 The pyNastran software interfaces to Nastran's complicated input and output
 files and provides a simplified interface to read/edit/write the various files.
