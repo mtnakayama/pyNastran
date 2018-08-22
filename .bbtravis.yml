@@ -39,7 +39,7 @@ before_install:
 # per http://conda.pydata.org/docs/travis.html
 install:
   - sudo apt-get update
-  - sudo apt-get install -y gfortran
+  - sudo apt-get install -y gfortran graphviz make
 
   # We do this conditionally because it saves us some downloading if the
   # version is the same.
@@ -69,10 +69,9 @@ install:
   - echo "python version=$TRAVIS_PYTHON_VERSION"
   
   # removed pandas
-  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]];     then conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION atlas numpy       scipy matplotlib h5py vtk pyqt; fi
-  - if [[ "$TRAVIS_PYTHON_VERSION" == "3.5" ]];     then conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION atlas numpy       scipy matplotlib h5py vtk pyqt; fi
-  - if [[ "$TRAVIS_PYTHON_VERSION" == "3.6" ]];     then conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION atlas numpy>=1.12 scipy matplotlib h5py vtk pyqt; fi
-  - if [[ "$TRAVIS_PYTHON_VERSION" == "nightly" ]]; then conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION atlas numpy<1.13  scipy matplotlib     ; fi
+  # py 3.6
+  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION alabaster>=0.7.9 atlas cycler docopt h5py matplotlib numpy>=1.12 numpydoc>=0.5.0 pillow pygments>=2.1.0 pyqt scipy sphinx>=1.5.0 sphinx_rtd_theme>=0.1.9 six vtk
+  
   - source activate test-environment
   - conda list
   - python setup.py develop
