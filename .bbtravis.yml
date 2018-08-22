@@ -76,7 +76,10 @@ install:
   - source activate test-environment
   - conda list
   - python setup.py develop
-
+  
+  # build docs
+  - cd docs/html_docs
+  - make html > make.out 2>&1
 
 # Run test
 script:
