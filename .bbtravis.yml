@@ -70,6 +70,8 @@ install:
   
   # removed pandas
   # py 3.6
+  - conda remove -y -n no-exist
+  - conda remove -y -n test-environment
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION alabaster>=0.7.9 atlas cycler docopt h5py matplotlib numpy>=1.12 numpydoc>=0.5.0 pillow pygments>=2.1.0 pyqt scipy sphinx>=1.5.0 sphinx_rtd_theme>=0.1.9 six vtk
   
   # buildbot-travis runs each line in a separate shell, so this must all be one line.
