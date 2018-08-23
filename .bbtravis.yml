@@ -67,9 +67,10 @@ install:
   # install dependencies
   # if line per https://docs.travis-ci.com/user/multi-os/
   - echo "python version=$TRAVIS_PYTHON_VERSION"
-  
+
   # removed pandas
   # py 3.6
+  # buildbot-travis runs every line inside a separate shell; this script must be run together
   - ./bbtravis-build.sh
 
 # Run test
