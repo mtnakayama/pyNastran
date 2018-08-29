@@ -16,6 +16,9 @@ conda list
 python setup.py develop
 
 cd docs/html_docs
+
+ls .
+
 make html > make.out 2>&1
 
 source deactivate
