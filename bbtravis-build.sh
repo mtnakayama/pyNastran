@@ -2,6 +2,8 @@
 set -e -x
 
 echo ${PATH}
+ls $(echo ${PATH} | cut -d: -f1)
+
 deactivate  # deactivate virtualenv
 
 conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION || :
