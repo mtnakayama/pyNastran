@@ -71,7 +71,7 @@ install:
   # removed pandas
   # py 3.6
   # buildbot-travis runs every line inside a separate shell; this script must be run together
-  - ./bbtravis-build.sh
+  - bash ./bbtravis-build.sh
 
 # Run test
 script:
