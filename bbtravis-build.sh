@@ -2,7 +2,7 @@
 set -e -x
 
 echo ${PATH}
-ls $(echo ${PATH} | cut -d: -f1)
+echo $(ls $(echo ${PATH} | cut -d: -f1))
 
 deactivate  # deactivate virtualenv
 
