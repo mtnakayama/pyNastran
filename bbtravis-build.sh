@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e -x
 
+echo ${PATH}
 deactivate  # deactivate virtualenv
 
 conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION || :
